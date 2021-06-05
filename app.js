@@ -1,11 +1,16 @@
-const express = require("express")
-const app = express()
+const express = require("express");
+const date = require(__dirname + "/date.js")
+const app = express();
 
-app.get("/",(req,res)=>{
-    res.send("Hello")
-})
+app.set("view engine", "ejs");
 
+app.get("/", (req, res) => {
 
-app.listen(3000,()=>{
-    console.log("Server start at port 3000.");
-})
+    let day = date()
+    console.log(day);
+    res.render("index")
+});
+
+app.listen(3000, () => {
+  console.log("Server start at port 3000.");
+});
