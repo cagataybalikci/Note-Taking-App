@@ -1,14 +1,26 @@
 <%-include("header.ejs") %>
 <div class="container">
-    <h1>Create Note</h1>
-    <div class="form">
-        <form action="">
-            <input type="text" name="note-title" id="note-title" placeholder="Note Title">
-            <textarea name="note-desc" id="note-desc" cols="30" rows="15" placeholder="Enter Description"></textarea>
-            <input type="submit" value="Save">
-        </form>
-    </div>
+  <h1>Create Note</h1>
+  <div class="form">
+    <form action="/create" method="post">
+      <input
+        type="text"
+        name="title"
+        id="note-title"
+        placeholder="Note Title"
+        autocomplete="off"
+      />
+      <textarea
+        name="desc"
+        id="noteDesc"
+        cols="30"
+        rows="15"
+        placeholder="Enter Description"
+        maxlength="140"
+      ></textarea>
+      <input type="submit" value="Save" />
+    </form>
+  </div>
 </div>
 
-
-<%-include("footer.ejs") %> 
+<%-include("footer.ejs") %>

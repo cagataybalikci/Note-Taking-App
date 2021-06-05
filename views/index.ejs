@@ -1,39 +1,16 @@
 <%-include("header.ejs") %>
-    <div class="container">
-        <h1>Notes</h1>
-        <div class="note-card">
-            <h3 class="note-title" id="note-title">Note Title</h3>
-            <p class="note-desc" id="note-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, earum?</p>
-            <div class="time-stamp">
-                <i class="far fa-clock"></i>
-                <small id="note-date">June-5-2021</small>
-            </div>
+<div class="container">
+  <h1>Notes</h1>
+  <% notesArray.forEach(note => { %>
+    <div class="note-card">
+        <h3 class="note-title" id="note-title"><%= note.noteTitle %></h3>
+        <p class="note-desc" id="note-desc"><%= note.noteDescription %></p>
+        <div class="time-stamp">
+          <i class="far fa-clock"></i>
+          <small id="note-date"><%= note.noteDate %></small>
         </div>
-        <div class="note-card">
-            <h3 class="note-title" id="note-title">Note Title</h3>
-            <p class="note-desc" id="note-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, earum?</p>
-            <div class="time-stamp">
-                <i class="far fa-clock"></i>
-                <small id="note-date">June-5-2021</small>
-            </div>
-        </div>
-        <div class="note-card">
-            <h3 class="note-title" id="note-title">Note Title</h3>
-            <p class="note-desc" id="note-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, earum?</p>
-            <div class="time-stamp">
-                <i class="far fa-clock"></i>
-                <small id="note-date">June-5-2021</small>
-            </div>
-        </div>
-        <div class="note-card">
-            <h3 class="note-title" id="note-title">Note Title</h3>
-            <p class="note-desc" id="note-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, earum?</p>
-            <div class="time-stamp">
-                <i class="far fa-clock"></i>
-                <small id="note-date">June-5-2021</small>
-            </div>
-        </div>
-    </div>
+      </div>
+  <% }) %>
+</div>
 
-
-<%-include("footer.ejs") %> 
+<%-include("footer.ejs") %>

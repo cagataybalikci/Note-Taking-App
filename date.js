@@ -1,5 +1,8 @@
 module.exports = getDate;
 
+
+const date = new Date();
+
 function getDate() {
   const options = {
     weekday: "long",
@@ -7,7 +10,7 @@ function getDate() {
     month: "long"
   };
 
-  const date = new Date();
-
   return date.toLocaleDateString("en-US", options);
 }
+
+
