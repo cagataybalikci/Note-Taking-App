@@ -3,6 +3,8 @@
 
 :root{
     --bg: #293b5f;
+    --nav-bar : #47597e;
+    --button-hover: #dbe6fd;
 }
 
 
@@ -19,4 +21,95 @@ body {
     display: flex;
     flex-direction: column;
     color: #fff;
+    height: 100vh;
+    font-size: 1rem;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--nav-bar);
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--bg);
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+nav a:hover{
+    background-color: var(--button-hover);
+    color: var(--bg);
+}
+
+.home{
+    background-color: var(--nav-bar);
+    font-size: 1.5rem;
+}
+
+.container {
+    margin: 20px;
+    height: 100%;
+}
+
+.container .note-card{
+    background-color: var(--button-hover);
+    margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    color: var(--nav-bar);
+    height: 20vh;
+}
+
+.container .note-card > h3,p,.time-stamp {
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.container .note-card .time-stamp{
+    justify-content: flex-end;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.container .note-card .time-stamp i {
+    margin-right: 10px;
+}
+
+
+footer{
+    background-color: var(--nav-bar);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20vh;
+    margin-top: 20px;
+}
+
+footer .socials i{
+    margin-top: 10px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+footer .socials i:hover{
+    color: var(--bg);
+}
+
+footer .copy{
+    margin: 10px auto;
+    font-size: 0.75rem;
+    justify-content: center;
+    align-items: center;
 }

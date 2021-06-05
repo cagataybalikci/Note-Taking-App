@@ -8,7 +8,6 @@ app.use(express.static("public"))
 app.get("/", (req, res) => {
 
     let day = date()
-    console.log(day);
     res.render("index", {currentDate : day})
 });
 
